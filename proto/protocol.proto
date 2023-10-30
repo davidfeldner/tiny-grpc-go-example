@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package grpcExample;
+
+option go_package = "grpc/proto";
+
+message Response {
+    string message = 1;
+}
+
+message EmptyRequest {}
+
+service ExampleService {
+    rpc ExampleMethod (EmptyRequest) returns (Response);
+}
